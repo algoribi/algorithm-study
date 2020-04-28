@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int n, f[2010][2010] = {0};

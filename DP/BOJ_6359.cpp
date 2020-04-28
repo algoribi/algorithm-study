@@ -2,6 +2,7 @@
 // BOJ_6359_만취한 상범
 
 #include <iostream>
+
 using namespace std;
 
 int main() {

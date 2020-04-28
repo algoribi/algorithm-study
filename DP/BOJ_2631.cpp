@@ -2,6 +2,7 @@
 // BOJ_2631_줄세우기
 
 #include <iostream>
+
 using namespace std;
 
 int main() {

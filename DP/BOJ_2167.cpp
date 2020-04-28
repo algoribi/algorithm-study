@@ -2,6 +2,7 @@
 // BOJ_2163_2차원 배열의 합
 
 #include <iostream>
+
 using namespace std;
 
 int v[305][305];

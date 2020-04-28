@@ -2,6 +2,7 @@
 // BOJ_11726_2xn 타일링
 
 #include <iostream>
+
 using namespace std;
 
 int main() {

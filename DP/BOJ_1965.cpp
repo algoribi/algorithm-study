@@ -2,6 +2,7 @@
 // BOJ_1965_상자넣기
 
 #include <iostream>
+
 using namespace std;
 
 int main() {

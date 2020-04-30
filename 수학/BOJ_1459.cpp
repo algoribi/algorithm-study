@@ -16,13 +16,13 @@ int main() {
         if (x <= y) {
             an = x * s;
             if ((y - x) * w > (y - x) * s)
-                an = an + ((y - x) % 2) * w + ((y - x) - (y - x) % 2) * s;
+                an += ((y - x) % 2) * w + ((y - x) - (y - x) % 2) * s;
             else
                 an += (y - x) * w;
         } else {
             an = y * s;
             if ((x - y) * w > (x - y) * s)
-                an = an + ((x - y) % 2) * w + ((x - y) - (x - y) % 2) * s;
+                an += ((x - y) % 2) * w + ((x - y) - (x - y) % 2) * s;
             else
                 an += (x - y) * w;
         }

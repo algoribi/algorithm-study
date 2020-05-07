@@ -1,6 +1,5 @@
 import re
 
-
 def solution(files):
 
     file = [re.split(r"([0-9]+)", i) for i in files]

@@ -5,9 +5,9 @@
 using namespace std;
 
 vector<int> solution(string msg) {
+    vector<int> answer;
     vector<string> dic = {"-", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
                           "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-    vector<int> answer;
     for (int i = 0; i < msg.size(); i++) {
         int save;
         string temp = "";

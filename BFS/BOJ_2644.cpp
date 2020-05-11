@@ -1,4 +1,3 @@
-
 // algorithm study
 // BOJ_2644_촌수계산
 

@@ -15,8 +15,7 @@ int main() {
             cin >> map[i][j];
         }
     }
-    int dx[] = {-1, 1, 0, 0};
-    int dy[] = {0, 0, -1, 1};
+    int dx[] = {-1, 1, 0, 0}, dy[] = {0, 0, -1, 1};
     for (int i = 0; i < r; i++) {
         for (int j = 0; j < c; j++) {
             int sheep = 0, wolf = 0, chk = 0;

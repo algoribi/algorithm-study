@@ -11,9 +11,5 @@ for i in range(test_case):
     next_time = int(next_time[:2]) * 3600 + int(next_time[3:5]) * 60 + int(next_time[6:])
     if now_time > next_time:
         next_time += 24 * 3600
-    answer = "%02d:%02d:%02d" % (
-        (next_time - now_time) / 3600,
-        ((next_time - now_time) % 3600) / 60,
-        ((next_time - now_time) % 3600) % 60,
-    )
+    answer = "%02d:%02d:%02d" % ((next_time - now_time) / 3600, ((next_time - now_time) % 3600) / 60, ((next_time - now_time) % 3600) % 60)
     print("#" + str(i + 1) + " " + answer + "\n")

@@ -51,13 +51,15 @@ int main() {
             }
         }
     }
+
     dfs_all_search();
     sort(save.begin(), save.end());
-    cout << save.size() << endl;
 
+    cout << save.size() << endl;
     for (int i = 0; i < save.size(); i++) {
         cout << save[i] << " ";
     }
     cout << endl;
+
     return 0;
 }

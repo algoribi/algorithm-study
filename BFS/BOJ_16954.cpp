@@ -12,7 +12,7 @@ struct go {
     int time;
 };
 
-main() {
+int main() {
     char block[10][10][10];
     int visit[10][10][10] = {0};
     for (int i = 0; i < 8; i++) {

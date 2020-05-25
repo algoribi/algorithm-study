@@ -5,6 +5,7 @@
 #include <vector>
 
 using namespace std;
+
 int n, m, visit[510][510] = {0}, dp[510][510] = {0}, answer = 0;
 char map[510][510];
 int dx[] = {1, -1, 0, 0};

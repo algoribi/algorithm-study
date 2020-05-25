@@ -7,29 +7,29 @@
 using namespace std;
 
 priority_queue<int> pq;
-vector<int> go[32001];
-int ind[32001];
+vector<int> graph[32001];
+int sum[32001];
 
 int main() {
     int n, m, u, v;
     cin >> n >> m;
     for (int i = 0; i < m; i++) {
         cin >> u >> v;
-        go[u].push_back(v);
-        ind[v]++;
+        graph[u].push_back(v);
+        sum[v]++;
     }
     for (int i = 1; i <= n; i++) {
-        if (ind[i] == 0)
+        if (sum[i] == 0)
             pq.push(-i);
     }
     while (!pq.empty()) {
         int pl = pq.top();
         pq.pop();
         cout << -pl << ' ';
-        for (int j = 0; j < go[-pl].size(); j++) {
-            int num = go[-pl][j];
-            ind[num]--;
-            if (ind[num] == 0)
+        for (int j = 0; j < graph[-pl].size(); j++) {
+            int num = graph[-pl][j];
+            sum[num]--;
+            if (sum[num] == 0)
                 pq.push(-num);
         }
     }

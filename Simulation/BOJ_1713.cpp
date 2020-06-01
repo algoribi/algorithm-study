@@ -10,9 +10,8 @@ using namespace std;
 int chk[110][2] = {0};
 
 bool v_sort(int a, int b) {
-    if (chk[a][0] == chk[b][0]) {
+    if (chk[a][0] == chk[b][0])
         return chk[a][1] > chk[b][1];
-    }
     return chk[a][0] > chk[b][0];
 }
 

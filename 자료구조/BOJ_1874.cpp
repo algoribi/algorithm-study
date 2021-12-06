@@ -1,40 +1,36 @@
-// BOJ_1874_스택 수열
-
-#include <stdio.h>
-
-#include <stack>
+#include <iostream>
 #include <vector>
 
 using namespace std;
 
 int main() {
-    int n, i, m, cnt = 1;
-    stack<int> st;
+    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
+    int n, a, chk = 1;
+    vector<int> v;
     vector<char> ans;
-    scanf("%d", &n);
-
-    for (i = 0; i < n; i++) {
-        scanf("%d", &m);
-        while (st.empty() || st.top() < m) {
-            st.push(cnt);
-            cnt++;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a;
+        if (v.size() == 0 || v[v.size() - 1] != a) {
+            if (chk > a) {
+                cout << "NO";
+                return 0;
+            }
+            while (chk != a) {
+                v.push_back(chk);
+                ans.push_back('+');
+                chk++;
+            }
             ans.push_back('+');
-        }
-        if (st.top() == m) {
-            st.pop();
             ans.push_back('-');
-        } else {
-            ans.clear();
-            break;
-            printf("NO\n");
+            chk++;
+        } else if (v[v.size() - 1] == a) {
+            v.pop_back();
+            ans.push_back('-');
         }
     }
-    if (ans.empty()) {
-        printf("NO\n");
-        return -1;
-    }
-    for (i = 0; i < ans.size(); i++) {
-        printf("%c\n", ans[i]);
-    }
+    for(int i = 0; i < ans.size(); i++)
+        cout << ans[i] << "\n";
     return 0;
 }
